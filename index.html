@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-
+        //Gets the user's choice
         function GetUserChoice (userInput) {
             userInput = prompt('Enter your selection: ',userInput);
     
@@ -17,7 +17,8 @@
                 alert(userInput + " is not a valid option. Please enter rock, paper, scissors");
             }
         }
-    
+        
+        //Gets the PC's choice
         function getComputerChoice(){
     
             const randomNumber = Math.floor(Math.random() * 3);
@@ -33,7 +34,7 @@
                     return 'scissors';
             }
         }
-    
+        //Plays a round of RPS. Pits the 2 selections against eachother and decides a winner.
         function playRound(){
     
             const userInput = GetUserChoice();
@@ -72,7 +73,7 @@
             console.log(userInput);
             console.log(ComputerSelection);
         }
-    
+        //runs the game 5 times.
         for (let i = 1; i < 6; i++){
             console.log(playRound());
         }
